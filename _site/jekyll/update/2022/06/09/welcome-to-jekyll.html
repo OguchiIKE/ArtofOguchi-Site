@@ -9,9 +9,8 @@
 </head>
 <body>
 
-    <div class="topnav">
-       
-<nav>
+       <div class="topnav" id="topnav">
+ <nav>
     
       <a class= "" href="/about/" >
         About
@@ -25,7 +24,9 @@
         Home
       </a>
     
+    
   </nav>
+</div>
 
 
   <!--<nav>
@@ -33,8 +34,24 @@
     <a href="/about/">About</a>
     <a href="/animation/">Animation</a>
   </nav> -->
-    </div>
 
+  <script>
+    //Select the nav
+    const navbar = document.getElementById('topnav');
+    window.onscroll = function() {scrollFunction()};
+ 
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    
+    navbar.classList.add('transnav'); // Adds a transparent class
+  } else {
+   
+    navbar.classList.remove('transnav') // Remove the transparency class
+  }
+}
+</script>
+    
+    
     <div class="top-page">
        
         <div id="top-video-container">

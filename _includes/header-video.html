@@ -12,17 +12,18 @@
   {% endif %}
 {% endif %}-->
 
-{% assign postImage = post.title-image %}
-{% assign postVideo = post.title-video %}
+{% assign titleImage = page.title-header-image %}
+{% assign titleVideo = page.title-video %}
 
+<div id="top-video-container">
 <video 
 	loop
 	muted
 	autoplay
 	preload="auto"
 	poster="{{ postImage }}">
-<source src="assets\videos\Tiger.mp4" type="video/mp4">
-<source src="{{ postVideo }}" type="video/webm">
+<source src="{{titleVideo}}.mp4" type="video/mp4">
+<source src="{{titleVideo}}.webm" type="video/webm">
+Browser unable to read video!
 </video> 
-
-<h2>{{page.title-image}}</h2>
+</div>

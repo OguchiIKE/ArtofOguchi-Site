@@ -9,9 +9,8 @@
 </head>
 <body>
 
-    <div class="topnav">
-       
-<nav>
+       <div class="topnav" id="topnav">
+ <nav>
     
       <a class= "" href="/about/" >
         About
@@ -25,7 +24,9 @@
         Home
       </a>
     
+    
   </nav>
+</div>
 
 
   <!--<nav>
@@ -33,8 +34,24 @@
     <a href="/about/">About</a>
     <a href="/animation/">Animation</a>
   </nav> -->
-    </div>
 
+  <script>
+    //Select the nav
+    const navbar = document.getElementById('topnav');
+    window.onscroll = function() {scrollFunction()};
+ 
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    
+    navbar.classList.add('transnav'); // Adds a transparent class
+  } else {
+   
+    navbar.classList.remove('transnav') // Remove the transparency class
+  }
+}
+</script>
+    
+    
     <div class="top-page">
        
         <div id="top-video-container">
@@ -44,18 +61,20 @@
     </div>
     <!---->
 
+<div id="top-video-container">
 <video loop="" muted="" autoplay="" preload="auto" poster="">
 <source src="assets\videos\Tiger.mp4" type="video/mp4" />
-<source src="" type="video/webm" />
-</video>
-
-<h2 class="top-video-container">/assets/images/titleAlt_Anim</h2>
+<source src="assets\videos\Tiger.webm" type="video/webm" />
+Browser unable to read video!
+</video> 
+</div>
 
 <div class="embed-container" id="top-video-container">
     <iframe src="https://player.vimeo.com/video/669322455" width="500" height="281" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="">
     </iframe>
   </div>
 
+<p><img src="assets\images\titleAlt_Anim.gif" alt="Img Test" /></p>
 <h1 id="hello-cool-world">Hello Cool World!</h1>
 
 <p>SUCH A LOVELY PLACE!!</p>
