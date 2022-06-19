@@ -5,4 +5,4 @@ vimeoId: 669322455
 permalink: /animation/
 ---
 {% include vimeoPlayer.html id=page.vimeoId %}
-# Anime!
+# Animation!
