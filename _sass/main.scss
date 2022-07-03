@@ -5,6 +5,32 @@
 
 $mainColor1: rgb(134, 40, 40);
 
+//Loading
+#loader {
+  border: 12px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 12px solid #444444;
+  width: 70px;
+  height: 70px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+.centerLoad {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+//End Loading
+
 .topnav {
     position: fixed;
     top: 0px;
@@ -69,6 +95,7 @@ color: aliceblue;
     width: 100%;
     height: auto;
     background-color: $mainColor1;
+    background-image: url("/assets/images/onLoad/loaderHead-still.webp"); 
     overflow: hidden;
 
   iframe{
@@ -100,9 +127,11 @@ color: aliceblue;
 
   video.loading{
   
-    background-image: url(assets\images\onLoad\loaderHead.webp);
+    background-image: url("/assets/images/onLoad/loaderHead-still.webp");
     background-size:100%;
     background-position: center;
+    width: 100%;
+    max-height: 100vh;
 
   }
 
