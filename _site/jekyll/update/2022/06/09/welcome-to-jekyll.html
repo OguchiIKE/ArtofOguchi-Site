@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 <body>
-    <div id="loader" class="centerLoad"></div>
+    <div id="loader" class="centerLoad"> <img src="assets\images\onLoad\loaderHeadcrop.gif" alt="LOADING"></div>
        <div class="topnav" id="topnav">
  <nav>
     
@@ -96,10 +96,12 @@ function scrollFunction() {
     <script>document.onreadystatechange = function() {
           if (document.readyState !== "complete") {
             document.querySelector("body").style.visibility = "hidden";
+            document.querySelector("body").style.overflow = "hidden";
             document.querySelector("#loader").style.visibility = "visible";
           }  else {
             document.querySelector("#loader").style.display = "none";
             document.querySelector("body").style.visibility = "visible";
+            document.querySelector("body").style.overflow = "";
           }
       };
     </script>
