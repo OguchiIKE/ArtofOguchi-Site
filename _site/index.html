@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Art of Oguchi</title>
+    <title>Home Art 0f Oguchi</title>
     <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 <body>
@@ -62,19 +62,85 @@ function scrollFunction() {
     <!---->
 
 <div id="top-video-container">
-<video loop="" muted="" autoplay="" preload="auto" poster="">
+<video poster="" loop="" muted="" autoplay="" preload="auto">
 <source src="assets\videos\Tiger.mp4" type="video/mp4" />
 <source src="assets\videos\Tiger.webm" type="video/webm" />
 Browser unable to read video!
 </video> 
 </div>
 
-<div class="embed-container" id="top-video-container">
+<script>
+ $('#top-video-container').on('loadstart', function (event) {
+    $(this).addClass('loading');
+  });
+  $('#top-video-container').on('canplaythrough', function (event) {
+    $(this).removeClass('loading');
+    $(this).attr('poster', '');
+  });
+
+</script>
+
+<div class="subheader-container" id="subheader">
+    <svg class="round-box" width="100%" height="100%" version="1.1" viewBox="0 0 189.38 49.153" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(-.36876 -93.649)">
+         <path d="m0.36876 93.649h165.42c13.271 0 23.954 10.961 23.954 24.576 0 13.615-10.684 24.576-23.954 24.576h-165.42z" fill="#808080" stroke-width=".32046" />
+        </g>
+       </svg>
+<div class="herotext">
+    
+    <p><b>Mr. Nnamdi Oguchi Anyaele</b> is a Nigerian-American creative who is eager to learn new ways to perfect his craft. His focus is in animation, illustration, editing and design, but he is not afraid to dabble in other means of creation, such as coding. Believing that every visual medium should tell a story, Nnamdi strives to give visible form to whatever may be looming in the depths of the imagination.</p>
+    
+</div>
+
+<svg class="thumb-circle" version="1.1" viewBox="0 0 49.137 49.137" xmlns="http://www.w3.org/2000/svg">
+    <g transform="translate(-70.871 -86.089)">
+     <circle cx="95.439" cy="110.66" r="24.568" fill="#808080" stroke-width=".22049" />
+    </g>
+   </svg>
+ 
+   <img src="assets\images\revatest.png" alt="Avatar" />
+ 
+
+</div>
+
+<div class="bodymenu-container">
+
+  <a href="/animation/">
+    <div class="card1">
+<!-- The two img switch system -->
+        <img class="idle-img" src="assets\images\Home\sampleRed.png" alt="1st Button" />
+
+          <picture class="animated-img">
+            <source srcset="assets\images\Home\Animation_hover.webp" type="image/webp" class="image-animated" />
+            <source srcset="assets\images\Home\Animation_hover.gif" type="image/gif" class="image-animated" /> 
+            <img src="assets\images\Home\Animation_hover.gif" alt="Animation!" class="image-animated" />
+          </picture> 
+        
+          <h2 class="title">ANIMATION</h2>
+    </div>
+  </a>
+
+    <div class="card1">
+        
+                <img class="idle-img" src="assets\images\Home\sampleRed.png" alt="1st Button" />
+        
+                  <picture class="animated-img">
+                    <source srcset="assets\images\Home\Animation_hover.webp" type="image/webp" class="image-animated" />
+                    <source srcset="assets\images\Home\Animation_hover.gif" type="image/gif" class="image-animated" /> 
+                    <img src="assets\images\Home\Animation_hover.gif" alt="Animation!" class="image-animated" />
+                  </picture> 
+
+                  <h2 class="title">STORY</h2>
+        
+            </div> 
+
+</div>
+
+<div class="embed-container">
     <iframe src="https://player.vimeo.com/video/669322455" width="500" height="281" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="">
     </iframe>
   </div>
 
-<p><img src="assets\images\titleAlt_Anim.gif" alt="Img Test" /></p>
 <h1 id="hello-cool-world">Hello Cool World!</h1>
 
 <p>SUCH A LOVELY PLACE!!</p>

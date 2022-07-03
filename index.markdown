@@ -3,19 +3,29 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: default
-title: Home Art of Oguchi 
+description: Art of Oguchi - Animator/Illustrator/Storyteller
+title: Home Art 0f Oguchi
 title-header-image: /assets/images/titleAlt_Anim.gif
 title-header-image-alt:  /assets/images/titleAlt.png
 title-video: assets\videos\Tiger
 title-videoAlt: 
 vimeoId: 669322455
+herotext: yes # Type in a value if true
+textpage: home
+subhead-avatar: assets\images\revatest.png
+
 ---
 {% include header-video.html %}
-{: #top-video-container }
+
+
+{% include subheader.html %}
+
+
+{% include home-body.html %}
 
 {% include vimeoPlayer.html id=page.vimeoId %}
 
-![Img Test](assets\images\titleAlt_Anim.gif)
+
 # Hello Cool World!
 
 SUCH A LOVELY PLACE!!

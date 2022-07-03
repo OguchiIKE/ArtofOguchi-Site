@@ -16,7 +16,7 @@
 {% assign titleVideo = page.title-video %}
 
 <div id="top-video-container">
-<video 
+<video  poster="assets\images\onLoad\smol.png"
 	loop
 	muted
 	autoplay
@@ -27,3 +27,14 @@
 Browser unable to read video!
 </video> 
 </div>
+
+<script>
+ $('#top-video-container').on('loadstart', function (event) {
+    $(this).addClass('loading');
+  });
+  $('#top-video-container').on('canplaythrough', function (event) {
+    $(this).removeClass('loading');
+    $(this).attr('poster', '');
+  });
+
+</script>

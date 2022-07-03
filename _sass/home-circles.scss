@@ -1,0 +1,156 @@
+$TextcolorMain: black;
+
+.bodymenu-container{
+  display: flex;
+  //flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  //background-color: aquamarine;
+  //position: relative;
+  margin: auto;
+  margin-bottom: 2%;
+  
+
+
+}
+
+.card1{
+
+  position: relative;
+  margin-top: 40px;
+  
+  max-width: 100%; //make sure card with fills the screen so wrap can keep things vertically centered
+  text-align: center;
+  
+}
+
+.idle-img{
+    
+    //display: block;
+    position: absolute;
+    top: 7%;
+    left: 50%;
+    transform: translate(-50%);
+    //margin-left: auto;
+   // margin-right: auto;
+    
+    width: 50%;
+    max-width: 600px;
+    z-index: 0;
+    transition: opacity 3s;
+    transition-delay: 1s;
+
+}
+
+.idle-img:hover{
+  
+  visibility: hidden;
+}
+
+.animated-img{ //animation container
+  position: relative;
+  //width: auto;
+  //left: 50%;
+  //transform: translateX(-45%);
+   // display: none;
+  visibility: hidden;
+
+ .image-animated{
+  
+  display: block;
+  margin:auto;
+  width: 80%;
+  //Offset the animation a smidge
+  //transform: translateX(5.3%); 
+  padding-left: 7.7%;
+  cursor: pointer;
+  
+
+
+ }
+
+ .image-animated:hover{
+
+  //Lets Animate!
+
+   animation: onBounce 1s ease;
+  
+
+ }
+
+ @keyframes onBounce {
+   0%  {transform: scale(0.8);}
+   15%  {transform: scale(1.2);}
+   25%  {transform: scale(0.9);}
+   35%  {transform: scale(1.14);}
+   40%  {transform: scale(1);}
+   45%  {transform: scale(1.05);}
+   50%  {transform: scale(1);}
+   55%  {transform: scale(1.02);}
+   100%  {transform: scale(1);}
+  
+
+ }
+  
+
+}
+
+.idle-img:hover + .animated-img{
+    visibility: visible;
+   
+
+    //display: block;
+   // margin-left: auto;
+   // margin-right: auto;
+    z-index: 2;
+    //width: 100px;
+    
+}
+
+.animated-img:hover{
+
+    visibility: visible;
+    //display: block;
+    position: relative;
+    
+    //left: 38%;
+    
+    //margin-left: auto;
+   // margin-right: auto;
+  
+    max-width: 600px;
+    //transform: scale(1);
+    //transform: translate(-45%);
+    //background-color: black;
+   
+}
+
+.title{
+position: absolute;
+top: 17%;
+left: 50%;
+transform: translate(-50%);
+font-size: 4vw;
+transition: 1s;
+transition-delay: 0.3;
+pointer-events: none;
+color: $TextcolorMain;
+}
+
+
+.animated-img:hover + .title{
+
+  font-size: 3.5vw;
+  transform: translateY(0% 10vw);
+  color: aliceblue;
+  opacity: 75%;
+
+}
+
+@keyframes titleUp {
+
+  0%  {transform: scale(1); transform: translateY(0); opacity: 100%;}
+  100%  {transform: scale(1.05); transform: translateY(10); opacity: 50%;}
+
+  
+}

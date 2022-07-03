@@ -1,0 +1,22 @@
+<div class = "subheader-container" id ="subheader">
+    <svg class = "round-box" width="100%" height="100%" version="1.1" viewBox="0 0 189.38 49.153" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(-.36876 -93.649)">
+         <path d="m0.36876 93.649h165.42c13.271 0 23.954 10.961 23.954 24.576 0 13.615-10.684 24.576-23.954 24.576h-165.42z" fill="#808080" stroke-width=".32046"/>
+        </g>
+       </svg>
+<div class="herotext">
+    {% if page.herotext %}
+    {% include_relative herotext/{{page.textpage}}text.html %}
+    {% endif %}
+</div>
+
+<svg class = "thumb-circle"  version="1.1" viewBox="0 0 49.137 49.137" xmlns="http://www.w3.org/2000/svg">
+    <g transform="translate(-70.871 -86.089)">
+     <circle cx="95.439" cy="110.66" r="24.568" fill="#808080" stroke-width=".22049"/>
+    </g>
+   </svg>
+ {% if page.subhead-avatar %}
+   <img src= "{{page.subhead-avatar}}" alt="Avatar">
+ {% endif %}
+
+</div>

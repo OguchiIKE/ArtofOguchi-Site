@@ -1,0 +1,58 @@
+/*This will dictate the subheader style bright below the video header*/ 
+
+.subheader-container{
+    position: relative;
+    width: 100%;
+    margin: 10px  0px;
+    margin-bottom: 5%;
+
+.round-box{
+    
+    max-width: 75%;
+    height: auto;
+    filter: drop-shadow(-5px 5px 5px rgba(46, 46, 46, 0.4));
+
+ svg{
+     
+    max-width: 100%;
+   // filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+ }
+
+}
+
+.herotext{
+    position: absolute;
+    top: 0px;
+    max-width: 65%;
+    padding: 1% 0;
+    font-size: 30px;
+    font-size: 1.8vw;
+    text-align: center;
+    
+}
+
+.thumb-circle{
+    position: absolute;
+    top: 50%;
+    right: 8%;
+    transform: translate(8%, -50%);
+    max-width: 15%;
+    height: auto;
+    //margin-left: 50px;
+    filter: drop-shadow(-5px 5px 5px rgba(46, 46, 46, 0.4));
+    
+}
+
+img{
+    
+    position: absolute;
+    top: 50%;
+    right: 8.9%;
+    transform: translate(8.9%, -50%);
+    max-width: 13%; 
+    height: auto;
+    border-radius: 50%;
+    //margin-left: calc(50px + 1.5%);
+}
+
+}
