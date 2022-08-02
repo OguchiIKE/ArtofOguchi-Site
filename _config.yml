@@ -30,6 +30,11 @@ sass:
   sass_dir: _sass
   load_paths:
     - _sass
+    - vendor/bundle/ruby/3.1.0/gems/
+
+collections:
+  - galleries
+    
     
 twitter_username: jekyllrb
 github_username:  jekyll
@@ -38,6 +43,8 @@ github_username:  jekyll
 theme: minima
 plugins:
   - jekyll-feed
+
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.

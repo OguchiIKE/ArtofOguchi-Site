@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+{% if page.gridy-menu %} <!-- This works-->
+<div class="grid-container">
+     {% assign title = page.title %}  
+     {% assign sorted_gallery = site.galleries | sort: "order" %}
+
+     {% for gallery in sorted_gallery %} 
+     {% if gallery.name == page.title %}
+     
+       {% for grid in gallery.grids %}
+     <div class="grid-box">
+        <a href="{{ grid.link }}" >
+            <img src="{{ grid.image }}" alt={{grid.title}}>
+            <div class="box-title">{{grid.title}}</div>
+          </a>
+          
+     </div>
+      {% endfor %}
+    {% endif %} 
+  {% endfor %} 
+  
+ 
+</div>
+  
+
+
+
+{% endif %}
+

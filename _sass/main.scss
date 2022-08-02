@@ -2,8 +2,18 @@
 @import 'colors';
 @import 'subheader';
 @import 'home-circles';
+@import 'gridy-menu';
 
 $mainColor1: rgb(134, 40, 40);
+
+
+body{
+    
+  margin: 0px;
+  background-color: white;
+  font-family: $font-robo; 
+  overflow-x: hidden;
+}
 
 //Loading
 #loader {
@@ -47,6 +57,8 @@ img{
 }
 //End Loading
 
+// --------- Main Navigation 
+
 .topnav {
     position: fixed;
     top: 0px;
@@ -59,6 +71,11 @@ img{
     overflow: hidden;
     transition: ease-in-out 1s;
     
+}
+
+.topnav nav {
+  margin-top: 0;
+  
 }
 
 .topnav a {
@@ -77,6 +94,7 @@ color: aliceblue;
 .topnav a:hover {
     background-color: rgb(73, 73, 73);
     color: #ddd;
+    
   }
 
 
@@ -88,6 +106,8 @@ color: aliceblue;
 
 }
 
+
+
 .transnav {
 
     opacity: 0.5;
@@ -95,21 +115,76 @@ color: aliceblue;
     
 }
 
-/*.top-page {
-    height: 1080px;
-    width: 1920px;
+.mobile-nav-toggle{
 
-    color: $col-lightblack;
+  display: none;
+
+}
+
+
+@media screen and (max-width: 550px) {
+  .topnav {
+      
+     // background-color: red;
+      height: 100%;
+      transform: translateY(-100%);
+      transition: transform 200ms ease-in-out;
+      z-index: 900;
+
+      a{
+        font-size: calc(16px + 6vw);
+        padding: auto;
+
+      }
+        
+  }
+
+  .topnav[data-visible="true"]{
+    transform: translateY(0%);
+  }
+
+  .topnav nav {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    margin-top: calc(20px + 10vh);
+    //gap: 5vh;
+   
     
-    background-color: $mainColor1;
-    
-} */
+  }
+  .mobile-nav-toggle{
+
+  display: block;
+  position: absolute;
+  z-index: 9999;
+  background-color: transparent;
+  background-image: url("/assets/images/icons/hamburger-icon.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 10vw;
+  border: 0;
+  aspect-ratio: 1;
+  top: 2%;
+  right: 2vh;
+
+ }
+
+ .mobile-nav-toggle[ aria-expanded="true"]{
+ 
+  background-image: url("/assets/images/icons/hamburger-icon-cross.svg");
+
+ }
+
+}
+
+//---------- End Main Navigation 
+
 
 #top-video-container{
      
     //padding-top: 28px;
     width: 100%;
-    height: auto;
+    height: auto; // Maybe add a max-height
     background-color: $mainColor1;
     background-image: url("/assets/images/onLoad/loaderHead-still.webp"); 
     overflow: hidden;
@@ -153,9 +228,3 @@ color: aliceblue;
 
 }
 
-body{
-    
-    margin: 0px;
-    background-color: white;
-    font-family: $font-robo; 
-}

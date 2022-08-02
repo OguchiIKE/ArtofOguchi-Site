@@ -1,0 +1,36 @@
+---
+
+name: "Animation"
+
+grids:
+
+- image: ../assets/images/Animation-thumbnails/Wanderer_thumb.jpg
+  title: Wanderer of Planet Parallelogram
+  link:  /about/
+  order: 1 
+
+- image: ../assets/images/Animation-thumbnails/Spaceman_thumb.jpg
+  title: Spaceman's Commute
+  link:  /about/
+  order: 2
+
+- image: ../assets/images/Animation-thumbnails/Deepdark_thumb.jpg
+  title: Deep Dark Spaces
+  link: /about/
+  order: 3
+
+- image: ../assets/images/Animation-thumbnails/Alien_thumb.jpg
+  title: Alien Rag
+  link: /about/
+  order: 4
+
+
+- image: ../assets/images/Animation-thumbnails/Extra_thumb.jpg
+  title: Extra Animations
+  link:  /about/
+  order: 5
+
+
+ 
+---
+#Thumbnails for the pages under animation

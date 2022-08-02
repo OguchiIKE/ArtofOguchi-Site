@@ -1,4 +1,10 @@
-<div class="topnav" id="topnav">
+<!--Mobile Button-->
+<button class="mobile-nav-toggle" 
+ aria-controls="topnav" aria-expanded="false">
+ <span class="visually-hidden"> Menu </span>
+</button>
+
+<div class="topnav" id="topnav" data-visible="false">
  <nav>
     {% for item in site.data.navigation %}
       <a class= "{% if page.url == item.link %} active {% endif %}" href="{{ item.link }}" >
@@ -19,6 +25,8 @@
   <script>
     //Select the nav
     const navbar = document.getElementById('topnav');
+    const navtoggle = document.querySelector(".mobile-nav-toggle");
+
     window.onscroll = function() {scrollFunction()};
  
 function scrollFunction() {
@@ -30,4 +38,18 @@ function scrollFunction() {
     navbar.classList.remove('transnav') // Remove the transparency class
   }
 }
+
+navtoggle.addEventListener("click", () => {
+  const visibility = navbar.getAttribute('data-visible');
+
+  if (visibility === "false"){
+    navbar.setAttribute('data-visible', true);
+    navtoggle.setAttribute("aria-expanded", true);
+  } else{
+    navbar.setAttribute('data-visible', false);
+    navtoggle.setAttribute("aria-expanded", false);
+  }
+  
+})
+
 </script>

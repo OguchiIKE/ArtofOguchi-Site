@@ -5,11 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Art 0f Oguchi</title>
+    <!-- CSS only -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="/assets/css/styles.css">
+    <!-- JavaScript Bundle with Popper -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script> -->
 </head>
 <body>
-    <div id="loader" class="centerLoad"> <img src="assets\images\onLoad\loaderHeadcrop.gif" alt="LOADING"></div>
-       <div class="topnav" id="topnav">
+    <div id="loader" class="centerLoad"> <img src="../assets/images/onLoad/loaderHeadcrop.gif" alt="LOADING"></div>
+       <!--Mobile Button-->
+<button class="mobile-nav-toggle" 
+ aria-controls="topnav" aria-expanded="false">
+ <span class="visually-hidden"> Menu </span>
+</button>
+
+<div class="topnav" id="topnav" data-visible="false">
  <nav>
     
       <a class= "" href="/about/" >
@@ -38,6 +48,8 @@
   <script>
     //Select the nav
     const navbar = document.getElementById('topnav');
+    const navtoggle = document.querySelector(".mobile-nav-toggle");
+
     window.onscroll = function() {scrollFunction()};
  
 function scrollFunction() {
@@ -49,6 +61,20 @@ function scrollFunction() {
     navbar.classList.remove('transnav') // Remove the transparency class
   }
 }
+
+navtoggle.addEventListener("click", () => {
+  const visibility = navbar.getAttribute('data-visible');
+
+  if (visibility === "false"){
+    navbar.setAttribute('data-visible', true);
+    navtoggle.setAttribute("aria-expanded", true);
+  } else{
+    navbar.setAttribute('data-visible', false);
+    navtoggle.setAttribute("aria-expanded", false);
+  }
+  
+})
+
 </script>
        
     

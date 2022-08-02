@@ -1,0 +1,60 @@
+
+
+.grid-container{
+    position: relative;
+    margin-top: 10vh;
+    width: 100%; 
+    display: grid; 
+    grid-template-columns: auto auto ; 
+    overflow: hidden;
+
+
+}
+
+.grid-box{
+    position: relative;
+    transition: transform .5s;
+    overflow: hidden;
+    
+
+    img{
+     
+        width: 100%;
+        transition: transform .5s;
+
+    }
+
+
+}
+
+.grid-box:hover img{
+
+    transform: scale(1.05);
+    z-index: 200;
+
+}
+
+.grid-box:hover  .box-title{
+
+    opacity: 0;
+
+}
+
+
+.box-title{
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 0%;
+    color: white;
+    font-size: 2.5vw;
+    text-align: center;
+    
+    background: rgba(0, 0, 0, 0.2);
+
+    z-index: 400;
+    opacity: 1;
+    transition: opacity .3s;
+}
