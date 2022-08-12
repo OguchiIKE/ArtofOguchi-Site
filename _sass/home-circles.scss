@@ -130,7 +130,7 @@ position: absolute;
 top: 17%;
 left: 50%;
 transform: translate(-50%);
-font-size: 4vw;
+font-size: 3.5vw;
 transition: 1s;
 transition-delay: 0.3;
 pointer-events: none;
@@ -140,7 +140,7 @@ color: $TextcolorMain;
 
 .animated-img:hover + .title{
 
-  font-size: 3.5vw;
+  font-size: 3.2vw;
   transform: translateY(0% 10vw);
   color: aliceblue;
   opacity: 75%;

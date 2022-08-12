@@ -12,7 +12,7 @@ title-videoAlt:
 vimeoId: 669322455
 herotext: yes # Type in a value if true
 textpage: home
-subhead-avatar: assets\images\revatest.png
+subhead-avatar: assets\images\Self.jpg
 
 ---
 {% include header-video.html %}
@@ -26,6 +26,6 @@ subhead-avatar: assets\images\revatest.png
 {% include vimeoPlayer.html id=page.vimeoId %}
 
 
-# Hello Cool World!
+<!-- # Hello Cool World!
 
-SUCH A LOVELY PLACE!!
+SUCH A LOVELY PLACE!! -->
