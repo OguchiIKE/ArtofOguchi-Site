@@ -37,11 +37,11 @@
 }
 
 .thumb-gallery{
+    width: 100%;
+    max-width: 1920px;
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-    width: 100%;
-    max-width: 1920px;
     margin-top: 25px;
     margin-bottom: 25px;
     padding-top: 25px;
@@ -50,6 +50,7 @@
     
     img{
         
+        width: 20vw;
         max-width: 300px;
         margin: 10px;
         
