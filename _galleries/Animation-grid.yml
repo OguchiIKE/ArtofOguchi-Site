@@ -11,12 +11,12 @@ grids:
 
 - image: ../assets/images/Animation-thumbnails/Spaceman_thumb.jpg
   title: Spaceman's Commute
-  link:  /about/
+  link:  /samplefolio/
   order: 2
 
 - image: ../assets/images/Animation-thumbnails/Deepdark_thumb.jpg
   title: Deep Dark Spaces
-  link: /about/
+  link: /samplefolio/
   order: 3
 
 - image: ../assets/images/Animation-thumbnails/Alien_thumb.jpg

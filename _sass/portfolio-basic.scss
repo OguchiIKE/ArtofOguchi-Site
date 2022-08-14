@@ -1,0 +1,128 @@
+.portfolio-page{
+  
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    height: auto;
+    background-color: rgb(87, 87, 87);
+
+    h1{
+        margin-top: 50px;
+       font-size: 3rem;
+       color: rgb(24, 24, 24);
+
+    }
+
+    p {
+        width: 75%;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    img{
+
+       width: 100%;
+       max-width: 1200px;
+       margin: 15px;
+       margin-top: 25px;
+       margin-left: 0%;
+
+    }
+}
+
+.thumb-gallery{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1920px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding-top: 25px;
+
+
+    
+    img{
+        
+        max-width: 300px;
+        margin: 10px;
+        
+        
+    }
+}
+
+/*Responsive stuff*/
+@media screen and (max-width: 550px) {
+
+    .portfolio-page{
+  
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 25px;
+        height: auto;
+        background-color: rgb(87, 87, 87);
+    
+        h1{
+           margin-top: 25px;
+           font-size: 4rem;
+           color: rgb(73, 73, 73);
+    
+        }
+    
+        p {
+            width: 100%;
+            max-width: 100%;
+            margin-left: 0px;
+            margin-right: 0px;
+            margin-top: 10px;
+        }
+    
+        img{
+    
+           width: 100%;
+           margin-top: 10px;
+           margin-left: 0%;
+    
+        }
+    }
+    //Lets have the thumbnails shrink to roughly 50% of the screen on mobile view
+    .thumb-gallery{
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        margin: 0px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        padding-top: 25px;
+        width: 100%;
+
+        a {
+            width: 50%;
+        }
+    
+    
+        img{
+            width: 100%;
+            margin: 0px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+            
+            
+            
+        }
+    }
+    
+}

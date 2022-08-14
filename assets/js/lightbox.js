@@ -38,7 +38,12 @@ function is_vimeolink(url,el) {
     xmlhttp.open("GET", 'https://vimeo.com/api/oembed.json?url='+url, true);
     xmlhttp.send();
 }
+//Add an indicator that reads if the gallery is on or off
+var isGalleryMode = false; 
+
 function setGallery(el) {
+    isGalleryMode = true;
+
     var elements = document.body.querySelectorAll(".gallery");
     elements.forEach(element => {
         element.classList.remove('gallery');
@@ -70,10 +75,23 @@ function setGallery(el) {
 		else var prevkey = parseInt(currentkey)-1;
 		document.getElementById('next').addEventListener("click", function() {
 			gallery_elements[nextkey].click();
-		});
+		});  
 		document.getElementById('prev').addEventListener("click", function() {
 			gallery_elements[prevkey].click();
 		});
+       //Keyboard navigation
+        document.onkeydown = function(e) {
+            if(isGalleryMode == true && gallery_elements.length >= 1)
+              if(e.key == "ArrowRight"){
+                  gallery_elements[nextkey].click();
+                  //console.log("Right key is pressed.");
+              }
+              else
+              if(e.key == "ArrowLeft"){
+                  gallery_elements[prevkey].click();
+                 // console.log("Left key is pressed."); 
+              }
+          }; 
 	}
 }
 
@@ -112,6 +130,16 @@ document.addEventListener("DOMContentLoaded", function() {
         if(event.target.id != 'next' && event.target.id != 'prev'){
             this.innerHTML = '';
             document.getElementById('lightbox').style.display = 'none';
+        }
+    });
+
+    //remove lightbox via Esc
+    document.addEventListener('keydown', (e) => {
+        if(e.key == "Escape"){
+            this.innerHTML = '';
+            document.getElementById('lightbox').style.display = 'none';
+            //console.log("ESC key is pressed.");
+            isGalleryMode = false;
         }
     });
     
